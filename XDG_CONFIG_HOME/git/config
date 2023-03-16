@@ -1,0 +1,13 @@
+[user]
+	name = Brett Gleason
+	email = brettmgleason@gmail.com
+[init]
+	defaultBranch = main
+[color]
+	status = auto
+	branch = auto
+	diff = auto
+	interactive = auto
+	ui = auto
+[push]
+	autoSetupRemote = true
