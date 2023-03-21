@@ -549,7 +549,7 @@ cmp.setup {
 }
 
 require("toggleterm").setup{
-  open_mapping = [[<leader>t]],
+  open_mapping = [[<c-\>]],
   hide_humbers = true,
   direction = "horizontal",
   close_on_exit = true,
