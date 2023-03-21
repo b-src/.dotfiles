@@ -80,6 +80,8 @@ require('lazy').setup({
   'theHamsta/nvim-dap-virtual-text',
   'nvim-telescope/telescope-dap.nvim',
 
+  { 'akinsho/toggleterm.nvim', version = "v2.*", config = true },
+
   -- Use mind.nvim for notetaking
   {
     'phaazon/mind.nvim',
@@ -546,6 +548,13 @@ cmp.setup {
   },
 }
 
+require("toggleterm").setup{
+  open_mapping = [[<leader>t]],
+  hide_humbers = true,
+  direction = "horizontal",
+  close_on_exit = true,
+  auto_scroll = true,
+}
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
