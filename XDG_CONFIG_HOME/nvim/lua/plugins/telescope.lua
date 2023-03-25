@@ -23,7 +23,8 @@ return {
     },
     config = function(_, opts)
       require("telescope").setup(opts)
-      require('telescope').load_extension('fzf')
+      require("telescope").load_extension("fzf")
+      require("telescope").load_extension("harpoon")
     end,
     keys = {
       {
@@ -92,6 +93,14 @@ return {
         end,
         desc = '[S]earch [D]iagnostics',
       },
+      -- TODO: fix function call
+      -- {
+      --   "<leader>sm",
+      --   function()
+      --     require('telescope.harpoon').marks()
+      --   end,
+      --   desc = '[S]earch harpoon [M]ark',
+      -- },
       {
         "<leader>key",
         function()
