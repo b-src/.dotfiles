@@ -1,7 +1,6 @@
 return {
   'nvim-lualine/lualine.nvim',
-  -- Should this be false?
-  lazy = "true",
+  event = "VeryLazy",
   opts = {
     icons_enabled = false,
     theme = 'gruvbox-material',
