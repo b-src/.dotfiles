@@ -1,0 +1,189 @@
+* {
+	border: 1px solid transparent;
+	border-radius: 0px;
+	margin: 0px 1px;
+	/* TODO: symbol font? */
+	font-family: "FiraCode Nerd Font Mono", "Font Awesome 6 Free";
+	font-size: 14px;
+	min-height: 0px;
+}
+
+
+@import "gruvbox-material-dark-medium.css";
+
+window#waybar {
+	border: none;
+	background-color: @background;
+	color: @foreground;
+	transition-property: background-color;
+	transition-duration: .5s;
+}
+
+.modules-left button:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-left: 5px;
+}
+
+.modules-left button:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-right: 5px;
+}
+
+#workspaces button {
+    padding: 0px 5px;
+    background-color: @color8;
+    color: @foreground;
+}
+
+#workspaces button:hover {
+    background-color: @color0;
+}
+
+#workspaces button.focused {
+    background-color: @color12;
+    color: @color0;
+}
+
+#workspaces button.urgent {
+    background-color: @color9;
+}
+
+#window {
+    padding: 0px 10px;
+    margin: 0px 10px;
+    border-radius: 5px;
+    background-color: @color8;
+}
+window#waybar.empty #window {
+    background: none;
+}
+
+#cpu {
+    border-radius: 5px 0px 0px 5px;
+    padding: 0px 5px;
+    background-color: @color11;
+    color: @color0;
+}
+
+#memory {
+    padding: 0px 5px;
+    background-color: @color11;
+    color: @color0;
+}
+
+#temperature {
+    padding: 0px 5px;
+    background-color: @color11;
+    color: @color0;
+}
+#temperature.critical {
+    background-color: @color9;
+}
+
+#disk.home {
+    padding: 0px 5px;
+    background-color: @color11;
+    color: @color0;
+}
+
+#disk.root {
+    border-radius: 0px 5px 5px 0px;
+    padding: 0px 5px;
+    margin-right: 5px;
+    background-color: @color11;
+    color: @color0;
+}
+
+
+#battery {
+    border-radius: 5px 5px 5px 5px;	
+}
+
+.modules-left :last-child {
+     border-radius: 0px 5px 5px 0px;	
+}
+#battery {
+    padding: 0px 5px;
+    background-color: @color2;
+    color: @color0;
+}
+#battery.plugged {
+    color: @foreground;
+    background-color: @color0;
+}
+#battery.charging {
+    color: @foreground;
+    background-color: @color2;
+}
+#battery.critical:not(.charging) {
+    background-color: @color9;
+    color: @foreground;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes blink {
+    to {
+        background-color: @foreground;
+        color: @color0;
+    }
+}
+
+#backlight {
+    border-radius: 5px 0px 0px 5px;	
+    padding: 0px 5px;
+    margin-left: 5px;
+    background-color: @color4;
+    color: @color0;
+}
+
+#pulseaudio {
+    padding: 0px 5px;
+    border-radius: 0px 5px 5px 0px;	
+    background-color: @color4;
+    color: @color0;
+}
+
+#pulseaudio.muted {
+    background-color: @color7;
+    color: @color0;
+}
+
+
+#tray {
+    padding: 0px 5px;
+    border-radius: 5px;
+    margin-left: 5px;
+    color: @color0;
+    background-color: @color8;
+}
+
+/* TODO: verify */
+#network {
+    padding: 0px 5px;
+    border-radius: 5px;
+    background-color: @color8;
+}
+
+#idle_inhibitor {
+    padding: 0px 5px;
+    border-radius: 5px;	
+    margin-left: 5px;
+    background-color: @color8;
+    color: @foreground;
+}
+#idle_inhibitor.activated {
+    background-color: @foreground;
+    color: @color8;
+}
+
+#clock {
+    padding: 0px 5px;
+    border-radius: 5px;	
+    margin: 0px 5px;
+    background-color: @color8;
+}
