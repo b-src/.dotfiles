@@ -59,8 +59,9 @@ vim.o.termguicolors = true
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
--- Set jk to esc
+-- Set jk and kj to esc
 vim.keymap.set('i', 'jk', '<esc>')
+vim.keymap.set('i', 'kj', '<esc>')
 
 -- Automatically center cursor with <C-u> and <C-d>
 vim.keymap.set({ 'n', 'v' }, '<C-u>', '<C-u>zz')
