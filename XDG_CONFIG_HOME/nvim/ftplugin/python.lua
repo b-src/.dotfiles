@@ -1,7 +1,13 @@
 local M = {}
 
 function M.format(args)
-  vim.cmd("make black ARGS=" .. args)
+  vim.cmd("make black BLACK_ARGS=" .. args)
+end
+
+function M.lint(args)
+  local errorformat="%f:%l:%c:\\ %t%n\\ %m"
+  vim.cmd("setlocal errorformat=" .. errorformat)
+  vim.cmd("make flake FLAKE_ARGS=" .. args)
 end
 
 vim.keymap.set(
@@ -22,5 +28,14 @@ vim.keymap.set(
   end,
   { desc = "[F]ormat [A]ll files" }
 )
+
+-- vim.keymap.set(
+--   "n",
+--   "<leader>fl",
+--   function()
+--     M.lint("lint")
+--   end,
+--   { desc = "[L]int all files" }
+-- )
 
 return M
