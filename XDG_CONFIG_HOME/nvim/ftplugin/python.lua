@@ -1,10 +1,16 @@
 local M = {}
 
-function M.format()
-  local filename = vim.api.nvim_buf_get_name(0)
-  vim.cmd("make black ARGS=" .. filename)
+function M.format(args)
+  vim.cmd("make black ARGS=" .. args)
 end
 
-vim.keymap.set("n", "<leader>ff", M.format, { desc = "[F]ormat file" })
+vim.keymap.set(
+  "n",
+  "<leader>ff",
+  function()
+    M.format(vim.api.nvim_buf_get_name(0))
+  end,
+  { desc = "[F]ormat current [F]ile" }
+)
 
 return M
