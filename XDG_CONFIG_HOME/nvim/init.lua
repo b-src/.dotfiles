@@ -69,12 +69,6 @@ vim.keymap.set({ 'n', 'v' }, '<C-d>', '<C-d>zz')
 -- Source config file
 vim.keymap.set('n', '<leader>con', "<cmd>source ~/.config/nvim/init.lua<CR>")
 
--- Format file with black
--- TODO: make this conditional on being in a python file
-vim.keymap.set('n', '<leader>f', function()
-  vim.fn.system("black .")
-end, { desc = '[F]ormat file with black' })
-
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
