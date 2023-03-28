@@ -1,22 +1,27 @@
 return {
   {
-    'mfussenegger/nvim-dap',
-    lazy = true,
-    opts = {},
+    "mfussenegger/nvim-dap",
+    event = "BufReadPre",
+    dependenciess = {
+      "theHamsta/nvim-dap-virtual-text",
+      "rcarriga/nvim-dap-ui",
+      "nvim-telescope/telescope-dap.nvim",
+      "mfussenegger/nvim-dap-python",
+    },
+    config = function()
+      require("dap").setup()
+    end,
   },
   {
     'rcarriga/nvim-dap-ui',
-    lazy = true,
     opts = {},
   },
   {
     'theHamsta/nvim-dap-virtual-text',
-    lazy = true,
     opts = {},
   },
   {
     'nvim-telescope/telescope-dap.nvim',
-    lazy = true,
     opts = {},
   },
   {
