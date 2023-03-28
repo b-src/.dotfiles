@@ -19,4 +19,8 @@ return {
     lazy = true,
     opts = {},
   },
+  {
+    "mfussenegger/nvim-dap-python",
+    opts = {},
+  },
 }
