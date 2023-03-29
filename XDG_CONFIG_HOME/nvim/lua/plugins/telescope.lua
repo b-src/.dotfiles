@@ -1,9 +1,10 @@
 return {
   {
-    'nvim-telescope/telescope.nvim',
+    "nvim-telescope/telescope.nvim",
     branch = '0.1.x',
     dependencies = {
-      'nvim-lua/plenary.nvim'
+      "nvim-lua/plenary.nvim",
+      "debugloop/telescope-undo.nvim",
     },
     cmd = "Telescope",
     opts = {
@@ -20,12 +21,18 @@ return {
           ['<C-d>'] = false,
         },
       },
+      extensions = {
+        undo = {
+          -- use defaults
+        },
+      },
     },
     config = function(_, opts)
       require("telescope").setup(opts)
       require("telescope").load_extension("fzf")
       require("telescope").load_extension("harpoon")
       require("telescope").load_extension("todo-comments")
+      require("telescope").load_extension("undo")
     end,
     keys = {
       {
@@ -106,6 +113,11 @@ return {
         "<leader>tt",
         "<cmd>TodoTelescope<cr>",
         desc = "Search [T]ODOs with [T]elescope",
+      },
+      {
+        "<leader>su",
+        "<cmd>Telescope undo<cr>",
+        desc = "[S]earch [U]ndos with telescope",
       },
       {
         "<leader>key",
