@@ -1,10 +1,17 @@
 return {
-  'nvim-lualine/lualine.nvim',
+  "nvim-lualine/lualine.nvim",
   event = "VeryLazy",
-  opts = {
-    icons_enabled = false,
-    theme = 'gruvbox-material',
-    component_separators = '|',
-    section_separators = '',
-  },
+  config = function ()
+    local function maximize_status()
+      return vim.t.maximized and '   fullscreen' or ''
+    end
+
+    require("lualine").setup {
+      icons_enabled = true,
+      theme = 'gruvbox-material',
+      sections = {
+        lualine_c = { 'filename', maximize_status },
+      },
+    }
+  end
 }
