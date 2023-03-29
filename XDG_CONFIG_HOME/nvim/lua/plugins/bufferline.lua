@@ -1,8 +1,12 @@
--- TODO: look into scope.nvim to scope buffers to tabs
 return {
   'akinsho/bufferline.nvim',
   dependencies = {
     'nvim-tree/nvim-web-devicons',
+    {
+      -- scope buffers to tabs
+      'tiagovla/scope.nvim',
+      opts = {},
+    },
   },
   event = "VeryLazy",
   opts = {
