@@ -6,7 +6,6 @@
 --  ThePrimeagen/refactoring.nvim
 --  tiagovla/scope.nvim
 --  Shatur/neovim-session-manager -- compare to folke/persistence.nvim
---  mbbill/undotree with debugloop/telescope-undo.nvim
 --  MAY NEED NIGHTLY/AREN'T READY YET
 --  folke/noice.nvim
 
@@ -52,6 +51,8 @@ vim.o.breakindent = true
 
 -- Save undo history
 vim.o.undofile = true
+vim.o.undofile = 10000
+vim.o.undodir = os.getenv("HOME") .. "/.nvim_undodir"
 
 -- Case insensitive searching UNLESS /C or capital in search
 vim.o.ignorecase = true
