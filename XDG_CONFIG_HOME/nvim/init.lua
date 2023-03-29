@@ -4,7 +4,6 @@
 --  nvim-orgmode/orgmode
 --  itchyny/vim-qfedit
 --  ThePrimeagen/refactoring.nvim
---  tiagovla/scope.nvim
 --  Shatur/neovim-session-manager -- compare to folke/persistence.nvim
 --  MAY NEED NIGHTLY/AREN'T READY YET
 --  folke/noice.nvim
