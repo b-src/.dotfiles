@@ -25,6 +25,7 @@ return {
       require("telescope").setup(opts)
       require("telescope").load_extension("fzf")
       require("telescope").load_extension("harpoon")
+      require("telescope").load_extension("todo-comments")
     end,
     keys = {
       {
@@ -101,6 +102,11 @@ return {
       --   end,
       --   desc = '[S]earch harpoon [M]ark',
       -- },
+      {
+        "<leader>tt",
+        "<cmd>TodoTelescope<cr>",
+        desc = "Search [T]ODOs with [T]elescope",
+      },
       {
         "<leader>key",
         function()
