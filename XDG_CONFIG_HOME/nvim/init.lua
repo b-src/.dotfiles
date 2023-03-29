@@ -1,6 +1,5 @@
 --  TODO - set up DAP. after that:
 --  PLUGINS TO LOOK AT
---  declancm/maximize.nvim
 --  nvim-neo-tree/neo-tree.nvim
 --  nvim-orgmode/orgmode
 --  itchyny/vim-qfedit
@@ -9,7 +8,6 @@
 --  Shatur/neovim-session-manager -- compare to folke/persistence.nvim
 --  folke/todo-comments.nvim
 --  mbbill/undotree with debugloop/telescope-undo.nvim
---  folke/which-key.nvim
 --  MAY NEED NIGHTLY/AREN'T READY YET
 --  folke/noice.nvim
 
