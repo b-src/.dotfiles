@@ -1,5 +1,5 @@
---  TODO - set up DAP. after that:
 --  PLUGINS TO LOOK AT
+--  ******* nvim-neotest/neotest *******
 --  nvim-neo-tree/neo-tree.nvim
 --  nvim-orgmode/orgmode
 --  itchyny/vim-qfedit
