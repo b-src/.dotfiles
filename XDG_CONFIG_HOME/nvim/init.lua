@@ -86,18 +86,6 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
--- Debugger keymaps
--- TODO: could be improved by making these lua functions
--- TODO: is this still the appropriate place for this?
--- I think yes, they should be set globally and not depend on the DAP plugins being loaded.
-vim.keymap.set("n", "<F5>", ":lua require'dap'.continue()<CR>", { desc = "Debugger continue" })
-vim.keymap.set("n", "<F7>", ":lua require'dap'.step_into()<CR>", { desc = "Debugger step into" })
-vim.keymap.set("n", "<F8>", ":lua require'dap'.step_over()<CR>", { desc = "Debugger step over" })
-vim.keymap.set("n", "<S-<F8>>", ":lua require'dap'.step_out()<CR>", { desc = "Debugger step out" })
-vim.keymap.set("n", "<leader>b", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { desc = "Debugger set [B]reakpoint" })
-vim.keymap.set("n", "<leader>lp", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", { desc = "Debugger [L]og [P]oint message" })
-vim.keymap.set("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>", { desc = "[D]ebugger [R]EPL" })
-
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
