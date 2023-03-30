@@ -75,8 +75,11 @@ vim.keymap.set('i', 'kj', '<esc>')
 vim.keymap.set({ 'n', 'v' }, '<C-u>', '<C-u>zz')
 vim.keymap.set({ 'n', 'v' }, '<C-d>', '<C-d>zz')
 
--- Source config file
-vim.keymap.set('n', '<leader>con', "<cmd>source ~/.config/nvim/init.lua<CR>")
+-- Switch windows directly with CTRL-<direction>
+vim.keymap.set('n', '<C-h>', '<C-w>h')
+vim.keymap.set('n', '<C-j>', '<C-w>j')
+vim.keymap.set('n', '<C-k>', '<C-w>k')
+vim.keymap.set('n', '<C-l>', '<C-w>l')
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
