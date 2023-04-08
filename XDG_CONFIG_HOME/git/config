@@ -11,3 +11,5 @@
 	ui = auto
 [push]
 	autoSetupRemote = true
+[core]
+	excludesfile = /home/brett/.config/git/ignore
