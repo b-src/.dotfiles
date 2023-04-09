@@ -75,4 +75,9 @@ return {
       { '<leader>q', vim.diagnostic.setloclist },
     }
   },
+
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    config = true,
+  },
 }
