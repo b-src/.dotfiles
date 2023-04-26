@@ -120,6 +120,13 @@ return {
         desc = "[S]earch [U]ndos with telescope",
       },
       {
+        "<C-q>",
+        function()
+          require('telescope.actions').send_selected_to_qflist()
+        end,
+        desc = 'Send selection to [Q]uickfix list',
+      },
+      {
         "<leader>key",
         function()
           require('telescope.builtin').keymaps()
