@@ -88,6 +88,9 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
+-- Keep cursor in the current location on yank instead of moving back to the start
+vim.keymap.set('v', 'y', 'ygv<Esc>')
+
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
