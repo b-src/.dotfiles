@@ -91,6 +91,9 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Keep cursor in the current location on yank instead of moving back to the start
 vim.keymap.set('v', 'y', 'ygv<Esc>')
 
+-- Move selections
+vim.keymap.set("v", "J", ":m '>+1<CR>gv==kgvo<esc>=kgvo", { desc = "move highlighted text down" })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv==jgvo<esc>=jgvo", { desc = "move highlighted text up" })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
