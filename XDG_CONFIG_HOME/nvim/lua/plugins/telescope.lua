@@ -124,6 +124,13 @@ return {
         function()
           require('telescope.actions').send_selected_to_qflist()
         end,
+        desc = "Send selection to [Q]uickfix list",
+      },
+      {
+        "<C-q>",
+        function()
+          require('telescope.actions').send_selected_to_qflist()
+        end,
         desc = 'Send selection to [Q]uickfix list',
       },
       {
