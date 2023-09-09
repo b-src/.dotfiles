@@ -23,8 +23,11 @@ return {
       -- LSP Server Settings
       ---@type lspconfig.options
       servers = {
-	pyright = {},
-	rust_analyzer = {},
+        bashls = {},
+        dockerls = {},
+        graphql = {},
+        html = {},
+        jsonls = {},
         lua_ls = {
           settings = {
             Lua = {
@@ -40,6 +43,13 @@ return {
             },
           },
         },
+	pyright = {},
+	rust_analyzer = {},
+        taplo = {},
+        texlab = {},
+        terraformls = {},
+        tsserver = {},
+        yamlls = {},
       },
       setup = {}
     },
