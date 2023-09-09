@@ -213,6 +213,7 @@ return {
     "hrsh7th/nvim-cmp",
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-buffer",
       "L3MON4D3/LuaSnip",
       "saadparwaiz1/cmp_luasnip",
     },
@@ -259,6 +260,7 @@ return {
           { name = 'luasnip' },
           -- TODO: limit behind env var?
           -- { name = 'copilot', group_index = 2 },
+          { name = 'buffer' },
         },
         sorting = {
           priority_weight = 2,
