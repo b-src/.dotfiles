@@ -70,9 +70,18 @@ vim.o.completeopt = 'menuone,noselect'
 vim.keymap.set('i', 'jk', '<esc>')
 vim.keymap.set('i', 'kj', '<esc>')
 
--- Automatically center cursor with <C-u> and <C-d>
+-- Automatically center cursor for:
+-- half page scroll
 vim.keymap.set({ 'n', 'v' }, '<C-u>', '<C-u>zz')
 vim.keymap.set({ 'n', 'v' }, '<C-d>', '<C-d>zz')
+-- tag stack and cursor jumps
+vim.keymap.set({ 'n', 'v' }, '<C-t>', '<C-t>zz')
+vim.keymap.set({ 'n', 'v' }, '<C-g>', '<C-g>zz')
+vim.keymap.set({ 'n', 'v' }, '<C-o>', '<C-o>zz')
+vim.keymap.set({ 'n', 'v' }, '<C-i>', '<C-i>zz')
+-- next
+vim.keymap.set('n', 'n', 'nzz')
+vim.keymap.set('n', 'N', 'Nzz')
 
 -- Switch windows directly with CTRL-<direction>
 vim.keymap.set('n', '<C-h>', '<C-w>h')
