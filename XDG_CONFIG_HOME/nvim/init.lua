@@ -4,8 +4,6 @@
 --  itchyny/vim-qfedit
 --  ThePrimeagen/refactoring.nvim
 --  Shatur/neovim-session-manager -- compare to folke/persistence.nvim
---  MAY NEED NIGHTLY/AREN'T READY YET
---  folke/noice.nvim
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
