@@ -102,13 +102,13 @@ return {
         desc = '[S]earch [D]iagnostics',
       },
       -- TODO: fix function call
-      -- {
-      --   "<leader>sm",
-      --   function()
-      --     require('telescope.harpoon').marks()
-      --   end,
-      --   desc = '[S]earch harpoon [M]ark',
-      -- },
+      {
+        "<leader>sm",
+        function()
+          require('telescope').load_extension('harpoon').marks()
+        end,
+        desc = '[S]earch harpoon [M]ark',
+      },
       {
         "<leader>tt",
         "<cmd>TodoTelescope<cr>",
