@@ -3,6 +3,7 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   opts = {
     NeoColumn = "120",
+    always_on = true,
   },
   keys = {
     {
