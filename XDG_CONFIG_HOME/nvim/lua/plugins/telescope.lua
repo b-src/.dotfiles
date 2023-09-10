@@ -126,6 +126,13 @@ return {
         desc = 'Send selection to [Q]uickfix list',
       },
       {
+        "<leader>tr",
+        function()
+          require('telescope.builtin').resume()
+        end,
+        desc = '[t] [R]esume previous telescope session',
+      },
+      {
         "<leader>key",
         function()
           require('telescope.builtin').keymaps()
