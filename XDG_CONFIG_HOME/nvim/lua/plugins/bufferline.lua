@@ -38,14 +38,6 @@ return {
         local icon = level:match("error") and " " or " "
         return " " .. icon .. count
       end,
-      -- TODO: may want to use this to e.g. not show help buffers or handle output log buffers separately.
-      -- There are examples in :h bufferline-filtering
-      -- NOTE: this will be called a lot so don't do any heavy processing here
-      -- custom_filter = function(buf_number, buf_numbers)
-      -- end,
-
-      -- TODO: only need this for vertical splits such as tree file explorers
-      -- offsets = {}
       color_icons = true,
       get_element_icon = function(element)
         -- element consists of {filetype: string, path: string, extension: string, directory: string}

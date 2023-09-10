@@ -101,7 +101,6 @@ return {
         end,
         desc = '[S]earch [D]iagnostics',
       },
-      -- TODO: fix function call
       {
         "<leader>sm",
         function()
