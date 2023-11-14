@@ -11,17 +11,17 @@ return {
       theme = 'gruvbox-material',
       sections = {
         lualine_c = { 'filename', maximize_status },
-        -- needed to show @recording messages in statusline
+        -- needed to show @recording messages in statusline with noice
         -- if those are shown as notifications, there's no confirmation when
         -- recording is turned off.
-        lualine_x = {
-          {
-            require("noice").api.statusline.mode.get,
-            cond = require("noice").api.statusline.mode.has,
-            -- TODO: link this to theme or at least make it consistent
-            color = { fg = "#ff9e64" },
-          }
-        },
+        -- lualine_x = {
+        --   {
+        --     require("noice").api.statusline.mode.get,
+        --     cond = require("noice").api.statusline.mode.has,
+        --     -- TODO: link this to theme or at least make it consistent
+        --     color = { fg = "#ff9e64" },
+        --   }
+        -- },
       },
     }
   end
