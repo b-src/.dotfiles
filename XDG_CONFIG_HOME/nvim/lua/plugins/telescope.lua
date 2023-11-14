@@ -30,7 +30,8 @@ return {
     config = function(_, opts)
       require("telescope").setup(opts)
       require("telescope").load_extension("fzf")
-      require("telescope").load_extension("harpoon")
+      -- broken with nvim v9.4 currently
+      -- require("telescope").load_extension("harpoon")
       require("telescope").load_extension("todo-comments")
       require("telescope").load_extension("undo")
     end,
@@ -101,13 +102,14 @@ return {
         end,
         desc = '[S]earch [D]iagnostics',
       },
-      {
-        "<leader>sm",
-        function()
-          require('telescope').load_extension('harpoon').marks()
-        end,
-        desc = '[S]earch harpoon [M]ark',
-      },
+      -- broken with nvim 9.4 currently
+      -- {
+      --   "<leader>sm",
+      --   function()
+      --     require('telescope').load_extension('harpoon').marks()
+      --   end,
+      --   desc = '[S]earch harpoon [M]ark',
+      -- },
       {
         "<leader>tt",
         "<cmd>TodoTelescope<cr>",
