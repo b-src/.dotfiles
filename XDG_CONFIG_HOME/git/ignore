@@ -1,5 +1,8 @@
 # dir used to organize worktrees
 .worktree/
 
+# venv
+.python-version
+
 # pyright venv path config
 pyrightconfig.json
