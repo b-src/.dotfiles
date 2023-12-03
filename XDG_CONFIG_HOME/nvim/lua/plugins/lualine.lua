@@ -1,6 +1,6 @@
 return {
   "nvim-lualine/lualine.nvim",
-  dir = require("lazy-nix-helper").get_plugin_path("lualine"),
+  dir = require("lazy-nix-helper").get_plugin_path("lualine.nvim"),
   event = "VeryLazy",
   config = function ()
     local function maximize_status()

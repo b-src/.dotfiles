@@ -16,7 +16,7 @@ local M = {
     },
     {
       "nvim-telescope/telescope-dap.nvim",
-      dir = require("lazy-nix-helper").get_plugin_path("telescope-dap"),
+      dir = require("lazy-nix-helper").get_plugin_path("telescope-dap.nvim"),
     },
     {
       "mfussenegger/nvim-dap-python",

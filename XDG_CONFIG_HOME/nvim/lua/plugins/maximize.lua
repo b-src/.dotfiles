@@ -1,6 +1,8 @@
 return {
   'declancm/maximize.nvim',
   dir = require("lazy-nix-helper").get_plugin_path("maximize"),
+  -- not packaged in nix
+  enabled = false,
   keys = {
     {
       "<leader>z",

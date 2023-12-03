@@ -1,6 +1,6 @@
 return {
   'lewis6991/gitsigns.nvim',
-  dir = require("lazy-nix-helper").get_plugin_path("gitsigns"),
+  dir = require("lazy-nix-helper").get_plugin_path("gitsigns.nvim"),
   lazy = "true",
   opts = {
     signs = {

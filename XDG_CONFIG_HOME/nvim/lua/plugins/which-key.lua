@@ -1,6 +1,6 @@
 return {
   "folke/which-key.nvim",
-  dir = require("lazy-nix-helper").get_plugin_path("which-key"),
+  dir = require("lazy-nix-helper").get_plugin_path("which-key.nvim"),
   event = "VeryLazy",
   keys = {
     {

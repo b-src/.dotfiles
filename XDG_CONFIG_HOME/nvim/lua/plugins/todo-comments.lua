@@ -1,10 +1,10 @@
 return {
   "folke/todo-comments.nvim",
-  dir = require("lazy-nix-helper").get_plugin_path("todo-comments"),
+  dir = require("lazy-nix-helper").get_plugin_path("todo-comments.nvim"),
   dependencies = {
     {
       "nvim-lua/plenary.nvim",
-      dir = require("lazy-nix-helper").get_plugin_path("plenary"),
+      dir = require("lazy-nix-helper").get_plugin_path("plenary.nvim"),
     },
   },
   event = { "BufReadPre", "BufNewFile" },

@@ -4,7 +4,7 @@ return {
   dependencies = {
     {
       "nvim-lua/plenary.nvim",
-      dir = require("lazy-nix-helper").get_plugin_path("plenary"),
+      dir = require("lazy-nix-helper").get_plugin_path("plenary.nvim"),
     },
     {
       "nvim-treesitter/nvim-treesitter",
@@ -12,7 +12,7 @@ return {
     },
     {
       "antoinemadec/FixCursorHold.nvim",
-      dir = require("lazy-nix-helper").get_plugin_path("FixCursorHold"),
+      dir = require("lazy-nix-helper").get_plugin_path("FixCursorHold.nvim"),
     },
     {
       "nvim-neotest/neotest-python",

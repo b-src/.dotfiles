@@ -1,6 +1,8 @@
 return {
   "ecthelionvi/NeoColumn.nvim",
   dir = require("lazy-nix-helper").get_plugin_path("NeoColumn"),
+  -- not packaged in nix
+  enabled = false,
   event = { "BufReadPre", "BufNewFile" },
   opts = {
     NeoColumn = "120",

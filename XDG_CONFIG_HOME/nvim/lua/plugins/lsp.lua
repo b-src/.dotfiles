@@ -8,19 +8,19 @@ return {
       --{ "folke/neoconf.nvim", cmd = "Neoconf", config = true },
       {
         "folke/neodev.nvim",
-        dir = require("lazy-nix-helper").get_plugin_path("neodev"),
+        dir = require("lazy-nix-helper").get_plugin_path("neodev.nvim"),
       },
       {
         "williamboman/mason.nvim",
-        dir = require("lazy-nix-helper").get_plugin_path("mason"),
+        dir = require("lazy-nix-helper").get_plugin_path("mason.nvim"),
       },
       {
         "williamboman/mason-lspconfig.nvim",
-        dir = require("lazy-nix-helper").get_plugin_path("mason-lspconfig"),
+        dir = require("lazy-nix-helper").get_plugin_path("mason-lspconfig.nvim"),
       },
       {
         "j-hui/fidget.nvim",
-        dir = require("lazy-nix-helper").get_plugin_path("fidget"),
+        dir = require("lazy-nix-helper").get_plugin_path("fidget.nvim"),
       },
       {
         "hrsh7th/cmp-nvim-lsp",
@@ -221,6 +221,7 @@ return {
   -- cmdline tools and lsp servers
   {
     "williamboman/mason.nvim",
+    dir = require("lazy-nix-helper").get_plugin_path("mason.nvim"),
     cmd = "Mason",
     opts = {},
   },
@@ -251,7 +252,7 @@ return {
       },
       {
         "L3MON4D3/LuaSnip",
-        dir = require("lazy-nix-helper").get_plugin_path("LuaSnip"),
+        dir = require("lazy-nix-helper").get_plugin_path("luasnip"),
       },
       {
         "saadparwaiz1/cmp_luasnip",

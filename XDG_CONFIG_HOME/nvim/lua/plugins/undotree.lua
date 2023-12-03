@@ -4,7 +4,7 @@ return {
   dependencies = {
     {
       "nvim-lua/plenary.nvim",
-      dir = require("lazy-nix-helper").get_plugin_path("plenary"),
+      dir = require("lazy-nix-helper").get_plugin_path("plenary.nvim"),
     },
   },
   keys = {

@@ -1,10 +1,10 @@
 return {
   "sindrets/diffview.nvim",
-  dir = require("lazy-nix-helper").get_plugin_path("diffview"),
+  dir = require("lazy-nix-helper").get_plugin_path("diffview.nvim"),
   dependencies = {
     {
       "nvim-lua/plenary.nvim",
-      dir = require("lazy-nix-helper").get_plugin_path("plenary"),
+      dir = require("lazy-nix-helper").get_plugin_path("plenary.nvim"),
     },
     {
       "nvim-tree/nvim-web-devicons",

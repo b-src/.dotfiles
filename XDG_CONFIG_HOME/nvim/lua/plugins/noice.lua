@@ -6,7 +6,7 @@ return {
   dependencies = {
     {
       "MunifTanjim/nui.nvim",
-      dir = require("lazy-nix-helper").get_plugin_path("nui"),
+      dir = require("lazy-nix-helper").get_plugin_path("nui.nvim"),
     },
     {
       "rcarriga/nvim-notify",
