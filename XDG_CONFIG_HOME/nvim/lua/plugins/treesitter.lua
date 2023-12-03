@@ -1,12 +1,18 @@
 return {
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
+    dir = require("lazy-nix-helper").get_plugin_path("nvim-treesitter"),
     build = function()
       pcall(require('nvim-treesitter.install').update { with_sync = true })
     end,
     -- Additional text objects via treesitter
     dependencies = {
-      'nvim-treesitter/nvim-treesitter-textobjects',
+      {
+        'nvim-treesitter/nvim-treesitter-textobjects',
+        dir = require("lazy-nix-helper").get_plugin_path("nvim-treesitter-textobjects"),
+        -- dir = "~/dev/nvim-treesitter-textobjects",
+        lazy = false,
+      },
     },
     opts = {
       -- Add languages to be installed here that you want installed for treesitter
@@ -78,6 +84,7 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter-context",
+    dir = require("lazy-nix-helper").get_plugin_path("nvim-treesitter-context"),
     config = true,
   },
 }

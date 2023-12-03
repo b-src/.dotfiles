@@ -2,14 +2,30 @@ return {
   -- lspconfig
   {
     "neovim/nvim-lspconfig",
+    dir = require("lazy-nix-helper").get_plugin_path("nvim-lspconfig"),
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
       --{ "folke/neoconf.nvim", cmd = "Neoconf", config = true },
-      { "folke/neodev.nvim", }, --opts = { experimental = { pathStrict = true } } },
-      "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
-      "j-hui/fidget.nvim",
-      "hrsh7th/cmp-nvim-lsp",
+      {
+        "folke/neodev.nvim",
+        dir = require("lazy-nix-helper").get_plugin_path("neodev"),
+      },
+      {
+        "williamboman/mason.nvim",
+        dir = require("lazy-nix-helper").get_plugin_path("mason"),
+      },
+      {
+        "williamboman/mason-lspconfig.nvim",
+        dir = require("lazy-nix-helper").get_plugin_path("mason-lspconfig"),
+      },
+      {
+        "j-hui/fidget.nvim",
+        dir = require("lazy-nix-helper").get_plugin_path("fidget"),
+      },
+      {
+        "hrsh7th/cmp-nvim-lsp",
+        dir = require("lazy-nix-helper").get_plugin_path("cmp-nvim-lsp"),
+      },
     },
     ---@class PluginLspOpts
     opts = {
@@ -211,14 +227,36 @@ return {
 
   {
     "hrsh7th/nvim-cmp",
+    dir = require("lazy-nix-helper").get_plugin_path("nvim-cmp"),
     dependencies = {
-      "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-cmdline",
-      "hrsh7th/cmp-path",
-      "hrsh7th/cmp-emoji",
-      "L3MON4D3/LuaSnip",
-      "saadparwaiz1/cmp_luasnip",
+      {
+        "hrsh7th/cmp-nvim-lsp",
+        dir = require("lazy-nix-helper").get_plugin_path("cmp-nvim-lsp"),
+      },
+      {
+        "hrsh7th/cmp-buffer",
+        dir = require("lazy-nix-helper").get_plugin_path("cmp-buffer"),
+      },
+      {
+        "hrsh7th/cmp-cmdline",
+        dir = require("lazy-nix-helper").get_plugin_path("cmp-cmdline"),
+      },
+      {
+        "hrsh7th/cmp-path",
+        dir = require("lazy-nix-helper").get_plugin_path("cmp-path"),
+      },
+      {
+        "hrsh7th/cmp-emoji",
+        dir = require("lazy-nix-helper").get_plugin_path("cmp-emoji"),
+      },
+      {
+        "L3MON4D3/LuaSnip",
+        dir = require("lazy-nix-helper").get_plugin_path("LuaSnip"),
+      },
+      {
+        "saadparwaiz1/cmp_luasnip",
+        dir = require("lazy-nix-helper").get_plugin_path("cmp_luasnip"),
+      },
     },
     config = function()
       -- nvim-cmp setup

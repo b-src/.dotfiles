@@ -1,6 +1,12 @@
 return {
   "zbirenbaum/copilot-cmp",
-  dependencies = "zbirenbaum/copilot.lua",
+  dir = require("lazy-nix-helper").get_plugin_path("copilot-cmp"),
+  dependencies = {
+    {
+      "zbirenbaum/copilot.lua",
+      dir = require("lazy-nix-helper").get_plugin_path("copilot"),
+    },
+  },
   cond = os.getenv("ENABLE_COPILOT") == "TRUE",
   opts = {},
   config = function(_, opts)

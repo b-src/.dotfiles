@@ -1,7 +1,11 @@
 return {
   "mbbill/undotree",
+  dir = require("lazy-nix-helper").get_plugin_path("undotree"),
   dependencies = {
-    "nvim-lua/plenary.nvim",
+    {
+      "nvim-lua/plenary.nvim",
+      dir = require("lazy-nix-helper").get_plugin_path("plenary"),
+    },
   },
   keys = {
     {

@@ -1,16 +1,27 @@
 local M = {
   "mfussenegger/nvim-dap",
+  dir = require("lazy-nix-helper").get_plugin_path("nvim-dap"),
 
   dependencies = {
-    "theHamsta/nvim-dap-virtual-text",
+    {
+      "theHamsta/nvim-dap-virtual-text",
+      dir = require("lazy-nix-helper").get_plugin_path("nvim-dap-virtual-text"),
+    },
     {
       "rcarriga/nvim-dap-ui",
+      dir = require("lazy-nix-helper").get_plugin_path("nvim-dap-ui"),
       config = function()
         require("dapui").setup()
       end,
     },
-    "nvim-telescope/telescope-dap.nvim",
-    "mfussenegger/nvim-dap-python",
+    {
+      "nvim-telescope/telescope-dap.nvim",
+      dir = require("lazy-nix-helper").get_plugin_path("telescope-dap"),
+    },
+    {
+      "mfussenegger/nvim-dap-python",
+      dir = require("lazy-nix-helper").get_plugin_path("nvim-dap-python"),
+    },
   },
 }
 

@@ -1,10 +1,17 @@
 return {
   {
     "nvim-telescope/telescope.nvim",
+    dir = require("lazy-nix-helper").get_plugin_path("telescope"),
     branch = '0.1.x',
     dependencies = {
-      "nvim-lua/plenary.nvim",
-      "debugloop/telescope-undo.nvim",
+      {
+        "nvim-lua/plenary.nvim",
+        dir = require("lazy-nix-helper").get_plugin_path("plenary"),
+      },
+      {
+        "debugloop/telescope-undo.nvim",
+        dir = require("lazy-nix-helper").get_plugin_path("telescope-undo"),
+      },
     },
     cmd = "Telescope",
     opts = {
@@ -145,6 +152,7 @@ return {
   },
   {
     'nvim-telescope/telescope-fzf-native.nvim',
+    dir = require("lazy-nix-helper").get_plugin_path("telescope-fzf-native"),
     build = 'make',
     cond = vim.fn.executable 'make' == 1
   },

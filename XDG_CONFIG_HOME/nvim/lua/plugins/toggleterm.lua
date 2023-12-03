@@ -1,5 +1,6 @@
 return {
   'akinsho/toggleterm.nvim',
+  dir = require("lazy-nix-helper").get_plugin_path("toggleterm"),
   version = "v2.*",
   opts = {
     open_mapping = [[<c-\>]],

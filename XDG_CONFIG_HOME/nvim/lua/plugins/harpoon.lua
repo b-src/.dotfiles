@@ -1,7 +1,11 @@
 return {
   "ThePrimeagen/harpoon",
+  dir = require("lazy-nix-helper").get_plugin_path("harpoon"),
   dependencies = {
-    "nvim-lua/plenary.nvim",
+    {
+      "nvim-lua/plenary.nvim",
+      dir = require("lazy-nix-helper").get_plugin_path("plenary"),
+    },
   },
   keys = {
       {

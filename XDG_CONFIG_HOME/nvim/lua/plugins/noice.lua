@@ -1,10 +1,17 @@
 return {
   "folke/noice.nvim",
+  dir = require("lazy-nix-helper").get_plugin_path("noice"),
   enabled = false,
   event = "VeryLazy",
   dependencies = {
-    "MunifTanjim/nui.nvim",
-    "rcarriga/nvim-notify",
+    {
+      "MunifTanjim/nui.nvim",
+      dir = require("lazy-nix-helper").get_plugin_path("nui"),
+    },
+    {
+      "rcarriga/nvim-notify",
+      dir = require("lazy-nix-helper").get_plugin_path("nvim-notify"),
+    }
   },
   opts = {
     lsp = {

@@ -1,10 +1,15 @@
 return {
   'akinsho/bufferline.nvim',
+  dir = require("lazy-nix-helper").get_plugin_path("bufferline"),
   dependencies = {
-    'nvim-tree/nvim-web-devicons',
+    {
+      'nvim-tree/nvim-web-devicons',
+      dir = require("lazy-nix-helper").get_plugin_path("nvim-web-devicons"),
+    },
     {
       -- scope buffers to tabs
       'tiagovla/scope.nvim',
+      dir = require("lazy-nix-helper").get_plugin_path("scope"),
       opts = {},
     },
   },
