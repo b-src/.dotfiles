@@ -10,7 +10,7 @@ return {
     },
     opts = {
       -- Add languages to be installed here that you want installed for treesitter
-      ensure_installed = { 'bash', 'c', 'cpp', 'css', 'dockerfile', 'go', 'html', 'ini', 'json', 'latex', 'lua', 'make', 'markdown', 'nix', 'python', 'rust', 'toml', 'typescript', 'yaml', 'zig', 'help', 'vim' },
+      ensure_installed = { 'bash', 'c', 'cpp', 'css', 'dockerfile', 'go', 'html', 'ini', 'json', 'latex', 'lua', 'make', 'markdown', 'markdown_inline', 'nix', 'python', 'rust', 'toml', 'typescript', 'yaml', 'zig', 'help', 'vim' },
 
       highlight = { enable = true, additional_vim_regex_highlighting = false },
       indent = { enable = true, },
