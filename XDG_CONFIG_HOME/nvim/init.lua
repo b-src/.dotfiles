@@ -1,10 +1,3 @@
---  PLUGINS TO LOOK AT
---  ******* nvim-neotest/neotest *******
---  nvim-orgmode/orgmode
---  itchyny/vim-qfedit
---  ThePrimeagen/refactoring.nvim
---  Shatur/neovim-session-manager -- compare to folke/persistence.nvim
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
