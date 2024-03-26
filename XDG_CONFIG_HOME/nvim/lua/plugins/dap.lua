@@ -11,6 +11,7 @@ local M = {
     },
     "nvim-telescope/telescope-dap.nvim",
     "mfussenegger/nvim-dap-python",
+    "nvim-neotest/nvim-nio",
   },
 }
 
